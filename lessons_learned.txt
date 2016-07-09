@@ -1,0 +1,18 @@
+Nach erstem Durchlauf:
+
+Extremer Overfit: 100% auf Traindaten und 53 Prozent auf Testdaten (ohne Regulierung, 4 Layer a 50 Perzeptronen)
+
+Probleme: batch_size hinkriegen; schlechte Accuracy (F1 Score) --> was müssen wir ändern... Layer? Perceptronen?...
+
+Nach l2 Regulation immernoch overfit
+
+Nach öfterem Durchlaufen: Anscheinend reichen ca 300 Epochen.. danach steigt die Accuracy nicht mehr an (bei batch_size 1/4 n)
+
+1 hidden Layer mit input/output perzeptronen
+
+Welche learning rate ist sinnvoll?
+	sollte kleiner als 0,1 sein
+
+Regularisierung von 1 auf 0.3 runter gesetzt --> stabil höhere test accuracy (learning = 0.01, batch = 1/4 n)
+
+Maximale test accuracy: 0.7 nach 3500 Epochen bei learning = 0.01; batch_size= 1/4 n; regularisierung = 1
